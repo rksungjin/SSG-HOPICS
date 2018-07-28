@@ -1,20 +1,20 @@
 import axios from "axios";
 
 export default {
-  // Gets all generalissues
-  getGeneralIssues: function() {
-    return axios.get("/api/generalissues");
+  // Gets all books
+  getBooks: function() {
+    return axios.get("/api/books");
   },
   // Gets the book with the given id
-  getGeneralIssue: function(id) {
-    return axios.get("/api/generalissues/" + id);
+  getBook: function(id) {
+    return axios.get("/api/books/" + id);
   },
   // Deletes the book with the given id
-  deleteGeneralIssue: function(id) {
-    return axios.delete("/api/generalissues/" + id);
+  deleteBook: function(id) {
+    return axios.delete("/api/books/" + id);
   },
   // Saves a book to the database
-  saveGeneralIssue: function(generalissueData) {
-    return axios.post("/api/generalissues", generalissueData);
+  saveBook: function(bookData) {
+    return axios.post("/api/books", bookData);
   }
 };

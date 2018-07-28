@@ -1,3 +1,3 @@
 module.exports = {
-  GeneralIssue: require("./generalissue")
+  Book: require("./book")
 };

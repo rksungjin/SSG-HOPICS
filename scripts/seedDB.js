@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the GeneralIssue collection and inserts the books below
+// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost:27017/reactreadinglist"
+  "mongodb://localhost/reactreadinglist"
 );
 
-const generalissueSeed = [
+const bookSeed = [
   {
     title: "The Dead Zone",
     author: "Stephen King",
@@ -123,9 +123,9 @@ const generalissueSeed = [
   }
 ];
 
-db.GeneralIssue
+db.Book
   .remove({})
-  .then(() => db.GeneralIssue.collection.insertMany(generalissueSeed))
+  .then(() => db.Book.collection.insertMany(bookSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

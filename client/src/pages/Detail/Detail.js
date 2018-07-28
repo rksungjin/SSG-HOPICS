@@ -6,13 +6,13 @@ import API from "../../utils/API";
 
 class Detail extends Component {
   state = {
-    generalissue: {}
+    book: {}
   };
-  // When this component mounts, grab the generalissue with the _id of this.props.match.params.id
-  // e.g. localhost:3000/genealissues/599dcb67f0f16317844583fc
+  // When this component mounts, grab the book with the _id of this.props.match.params.id
+  // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
-    API.getGeneralIssue(this.props.match.params.id)
-      .then(res => this.setState({ generalissue: res.data }))
+    API.getBook(this.props.match.params.id)
+      .then(res => this.setState({ book: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.generalissue.title} by {this.state.generalissue.author}
+                {this.state.book.title} by {this.state.book.author}
               </h1>
             </Jumbotron>
           </Col>
@@ -33,14 +33,14 @@ class Detail extends Component {
             <article>
               <h1>Synopsis</h1>
               <p>
-                {this.state.generalissue.synopsis}
+                {this.state.book.synopsis}
               </p>
             </article>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to other page - what it call it</Link>
+            <Link to="/">← Back to Authors</Link>
           </Col>
         </Row>
       </Container>

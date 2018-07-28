@@ -7,29 +7,29 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class GeneralIssues extends Component {
+class Books extends Component {
   state = {
-    generalissues: [],
+    books: [],
     title: "",
     author: "",
     synopsis: ""
   };
 
   componentDidMount() {
-    this.loadGeneralIssues();
+    this.loadBooks();
   }
 
-  loadGeneralIssues = () => {
-    API.getGeneralIssues()
+  loadBooks = () => {
+    API.getBooks()
       .then(res =>
-        this.setState({ generalissues: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteGeneralIssue = id => {
-    API.deleteGeneralIssue(id)
-      .then(res => this.loadGeneralIssues())
+  deleteBook = id => {
+    API.deleteBook(id)
+      .then(res => this.loadBooks())
       .catch(err => console.log(err));
   };
 
@@ -43,12 +43,12 @@ class GeneralIssues extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveGeneralIssue({
+      API.saveBook({
         title: this.state.title,
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadGeneralIssues())
+        .then(res => this.loadBooks())
         .catch(err => console.log(err));
     }
   };
@@ -57,33 +57,9 @@ class GeneralIssues extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>General</h1>
-              This is a forum for agencies-wide announcements and work-based matters
-            </Jumbotron>
-            {this.state.generalissues.length ? (
-              <List>
-                {this.state.generalissues.map(generalissue => (
-                  <ListItem key={generalissue._id}>
-                    {/*<Link to={"/generalissues/" + generalissue._id}>*/}
-                      <strong>
-                        {generalissue.title} by {generalissue.author}
-                        {generalissue.synopsis}
-                      </strong>
-                    {/*</Link>*/}
-                    <DeleteBtn onClick={() => this.deleteGeneralIssue(generalissue._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-
           <Col size="md-6">
             <Jumbotron>
-              <h1>Add a post to General</h1>
+              <h1>What Books Should I Read?</h1>
             </Jumbotron>
             <form>
               <Input
@@ -108,15 +84,35 @@ class GeneralIssues extends Component {
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit to General
+                Submit Book
               </FormBtn>
             </form>
           </Col>
-          
+          <Col size="md-6 sm-12">
+            <Jumbotron>
+              <h1>Books On My List</h1>
+            </Jumbotron>
+            {this.state.books.length ? (
+              <List>
+                {this.state.books.map(book => (
+                  <ListItem key={book._id}>
+                    <Link to={"/books/" + book._id}>
+                      <strong>
+                        {book.title} by {book.author}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
         </Row>
       </Container>
     );
   }
 }
 
-export default GeneralIssues;
+export default Books;

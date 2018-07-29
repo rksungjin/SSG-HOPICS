@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const blogSeed = [
   {
     title: "The Dead Zone",
     author: "Stephen King",

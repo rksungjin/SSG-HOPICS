@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+// This file empties the Blogs collection and inserts the blogs below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const blogSeed = [
   {
     title: "The Dead Zone",
     author: "Stephen King",
@@ -123,9 +123,9 @@ const bookSeed = [
   }
 ];
 
-db.Book
+db.Blog
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Blog.collection.insertMany(blogSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

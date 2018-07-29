@@ -57,7 +57,31 @@ class Blogs extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-3 sm-0"></Col>
+          <Col size="md-6 sm-12">
+            <Jumbotron>
+              <h1>General</h1>
+              This is a forum for general work-based matters
+            </Jumbotron>
+            {this.state.blogs.length ? (
+              <List>
+                {this.state.blogs.map(blog => (
+                  <ListItem key={blog._id}>
+                    <Link to={"/blogs/" + blog._id}>
+                      <strong>
+                        {blog.title} by {blog.author}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteBook(blog._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          {/*</Col>
+
+          <Col size="md-6">*/}
             <Jumbotron>
               <h1>Add a Post to General</h1>
             </Jumbotron>
@@ -88,28 +112,7 @@ class Blogs extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>General</h1>
-              This is a forum for general work-based matters
-            </Jumbotron>
-            {this.state.blogs.length ? (
-              <List>
-                {this.state.blogs.map(blog => (
-                  <ListItem key={blog._id}>
-                    <Link to={"/blogs/" + blog._id}>
-                      <strong>
-                        {blog.title} by {blog.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(blog._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
+          <Col size="md-3 sm-0"></Col>
         </Row>
       </Container>
     );

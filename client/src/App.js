@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./blogPages/Blogs";
+import Blogs from "./blogPages/Blogs";
 import Detail from "./blogPages/Detail";
 import NoMatch from "./blogPages/NoMatch";
 import Nav from "./components/Nav";

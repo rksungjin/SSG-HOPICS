@@ -7,28 +7,28 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class Books extends Component {
+class Blogs extends Component {
   state = {
-    books: [],
+    blogs: [],
     title: "",
     author: "",
     synopsis: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadBlogs();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadBlogs = () => {
+    API.getBlogs()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ blogs: res.data, title: "", author: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
+  deleteBlog = id => {
+    API.deleteBlog(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
   };
@@ -43,12 +43,12 @@ class Books extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveBook({
+      API.saveBlog({
         title: this.state.title,
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadBlogs())
         .catch(err => console.log(err));
     }
   };
@@ -59,7 +59,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Add a Post to General</h1>
             </Jumbotron>
             <form>
               <Input
@@ -84,24 +84,25 @@ class Books extends Component {
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit a Post
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>General</h1>
+              This is a forum for general work-based matters
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.blogs.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.blogs.map(blog => (
+                  <ListItem key={blog._id}>
+                    <Link to={"/blogs/" + blog._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {blog.title} by {blog.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => this.deleteBook(blog._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -115,4 +116,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Blogs;

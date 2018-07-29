@@ -29,7 +29,7 @@ class Blogs extends Component {
 
   deleteBlog = id => {
     API.deleteBlog(id)
-      .then(res => this.loadBooks())
+      .then(res => this.loadBlogs())
       .catch(err => console.log(err));
   };
 

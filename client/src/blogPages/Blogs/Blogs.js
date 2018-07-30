@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
+import FontSizeP from "../../components/FontSize/FontSizeP";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -69,11 +70,17 @@ class Blogs extends Component {
                   <ListItem key={blog._id}>
                     <Link to={"/blogs/" + blog._id}>
                       <strong>
-                        {blog.title} posted by {blog.postedBy}
-                        <br />
-                        {blog.content}
+                        <FontSizeP>
+                        {blog.title}
+                        </FontSizeP>
+                        <FontSizeP>
+                        Posted by:  {blog.postedBy}
+                        </FontSizeP>
                       </strong>
                     </Link>
+                    <FontSizeP>
+                    {blog.content}
+                    </FontSizeP>
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                   </ListItem>
                 ))}

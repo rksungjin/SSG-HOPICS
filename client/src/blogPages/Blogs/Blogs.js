@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
+import EditBtn from "../../components/EditBtn";
 import Jumbotron from "../../components/Jumbotron";
 import FontSizeP from "../../components/FontSize/FontSizeP";
 import API from "../../utils/API";
@@ -30,6 +31,14 @@ class Blogs extends Component {
 
   deleteBlog = id => {
     API.deleteBlog(id)
+      .then(res => this.loadBlogs())
+      .catch(err => console.log(err));
+  };
+
+  // ????????????????
+  // ????????????????
+  editBlog = id => {
+    API.editBlog(id)
       .then(res => this.loadBlogs())
       .catch(err => console.log(err));
   };
@@ -81,7 +90,10 @@ class Blogs extends Component {
                     <FontSizeP>
                     {blog.content}
                     </FontSizeP>
+
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
+                    <br/>
+                    <EditBtn onClick={() => this.editBlog(blog._id)} />
                   </ListItem>
                 ))}
               </List>

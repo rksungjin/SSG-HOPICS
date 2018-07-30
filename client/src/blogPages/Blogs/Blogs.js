@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
+import EditBtn from "../../components/EditBtn";
 import Jumbotron from "../../components/Jumbotron";
+import FontSizeP from "../../components/FontSize/FontSizeP";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -11,8 +13,8 @@ class Blogs extends Component {
   state = {
     blogs: [],
     title: "",
-    author: "",
-    synopsis: ""
+    postedBy: "",
+    content: ""
   };
 
   componentDidMount() {
@@ -22,13 +24,21 @@ class Blogs extends Component {
   loadBlogs = () => {
     API.getBlogs()
       .then(res =>
-        this.setState({ blogs: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
       )
       .catch(err => console.log(err));
   };
 
   deleteBlog = id => {
     API.deleteBlog(id)
+      .then(res => this.loadBlogs())
+      .catch(err => console.log(err));
+  };
+
+  // ????????????????
+  // ????????????????
+  editBlog = id => {
+    API.editBlog(id)
       .then(res => this.loadBlogs())
       .catch(err => console.log(err));
   };
@@ -42,11 +52,11 @@ class Blogs extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
+    if (this.state.title && this.state.postedBy) {
       API.saveBlog({
         title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+        postedBy: this.state.postedBy,
+        content: this.state.content
       })
         .then(res => this.loadBlogs())
         .catch(err => console.log(err));
@@ -69,10 +79,21 @@ class Blogs extends Component {
                   <ListItem key={blog._id}>
                     <Link to={"/blogs/" + blog._id}>
                       <strong>
-                        {blog.title} by {blog.author}
+                        <FontSizeP>
+                        {blog.title}
+                        </FontSizeP>
+                        <FontSizeP>
+                        Posted by:  {blog.postedBy}
+                        </FontSizeP>
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(blog._id)} />
+                    <FontSizeP>
+                    {blog.content}
+                    </FontSizeP>
+
+                    <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
+                    <br/>
+                    <EditBtn onClick={() => this.editBlog(blog._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -93,19 +114,19 @@ class Blogs extends Component {
                 placeholder="Title (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.postedBy}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="postedBy"
+                placeholder="Posted by (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.content}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="content"
+                placeholder="Content"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                disabled={!(this.state.postedBy && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
                 Submit a Post

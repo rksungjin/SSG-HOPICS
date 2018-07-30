@@ -9,11 +9,16 @@ export default {
   getBlog: function(id) {
     return axios.get("/api/blogs/" + id);
   },
-  // Deletes the book with the given id
+  // Deletes the blog with the given id
   deleteBlog: function(id) {
     return axios.delete("/api/blogs/" + id);
   },
-  // Saves a book to the database
+  // Updates the blog with the given id ??????????????????????????????????
+  editBlog: function(id) {
+    return axios.put("/api/blogs/" + id);
+  },
+
+  // Saves a blog to the database
   saveBlog: function(blogData) {
     return axios.post("/api/blogs", blogData);
   }

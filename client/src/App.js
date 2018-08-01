@@ -4,6 +4,10 @@ import Blogs from "./blogPages/Blogs";
 import Detail from "./blogPages/Detail";
 import NoMatch from "./blogPages/NoMatch";
 import Nav from "./components/Nav";
+import lAAPI from "./lAAPI/"
+import newsletter from "./newsletter/Newsletter";
+
+
 
 const App = () => (
   <Router>
@@ -14,6 +18,8 @@ const App = () => (
         <Route exact path="/blogs" component={Blogs} />
         <Route exact path="/blogs/:id" component={Detail} />
         <Route component={NoMatch} />
+        <Route exact path="/lAAPI/" component ={lAAPI} />
+        <Route exact path="/newsletter/" component= {Newsletter} />
       </Switch>
     </div>
   </Router>

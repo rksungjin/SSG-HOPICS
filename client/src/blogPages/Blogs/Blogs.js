@@ -83,7 +83,7 @@ class Blogs extends Component {
                         {blog.title}
                         </FontSizeP>
                         <FontSizeP>
-                        Posted by:  {blog.postedBy}
+                        Posted by  {blog.postedBy} on {blog.date}
                         </FontSizeP>
                       </strong>
                     </Link>
@@ -93,7 +93,9 @@ class Blogs extends Component {
 
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     <br/>
+                    <Link to={"/blogs/" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />
+                    </Link>
                   </ListItem>
                 ))}
               </List>

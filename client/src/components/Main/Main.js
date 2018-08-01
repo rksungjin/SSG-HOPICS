@@ -1,8 +1,8 @@
 // Include React
 import React, { Component } from 'react';
-import Nav from './children/Nav';
+import Nav from '../children/nav';
 
-require('./main.css');
+require('./Main.css');
 
 // Here we include all of the sub-components
 // var Form = require("./children/Form");

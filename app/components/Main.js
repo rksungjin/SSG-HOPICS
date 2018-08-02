@@ -69,7 +69,7 @@ export default class Main extends Component {
                                 <div className="col-md-6 col-md-offset-3">
                                     <div className="testimonials">
                                         <div className="active item">
-                                          <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                          <blockquote><p> horem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
                                           <div className="carousel-info">
                                             <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" className="pull-left" />
                                             <div className="pull-left">

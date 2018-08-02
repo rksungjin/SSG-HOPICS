@@ -7,6 +7,7 @@ import {
 import Main from "./Main";
 import Login from "./Login";
 import Signup from "./Signup";
+import Blogs from "../blogPages/Blogs";
 import axios from 'axios';
 
 export default class MainRouter extends Component {
@@ -75,6 +76,9 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/blogs/:id" component={Detail} />
+          <Route component={NoMatch} />
       	</Switch>
       </Router>
     );

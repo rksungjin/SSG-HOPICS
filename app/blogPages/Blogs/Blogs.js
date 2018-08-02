@@ -77,7 +77,7 @@ class Blogs extends Component {
               <List>
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blogs/" + blog._id}>
+                    <Link to={"/blog/" + blog._id}>
                       <strong>
                         <FontSizeP>
                         {blog.title}
@@ -93,7 +93,7 @@ class Blogs extends Component {
 
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     <br/>
-                    <Link to={"/blogs/" + blog._id}>
+                    <Link to={"/blog/" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />
                     </Link>
                   </ListItem>

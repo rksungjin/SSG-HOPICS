@@ -3,7 +3,7 @@ module.exports = function(app){
 		const users = require('./routes/users');
 		const trips = require('./routes/trips');
 		const pricing = require('./routes/pricing');
-		const blog = require('./routes/blog');
+		const blog = require('./routes/blogs');
 
 		const authCheckMiddleware = require('./config/middleware/authCheck');
 		app.use('/apis/trips', authCheckMiddleware);

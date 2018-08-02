@@ -76,8 +76,8 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
-          <Route exact path="/blogs" component={Blogs} />
-          <Route exact path="/blogs/:id" component={Detail} />
+          <Route exact path="/blog" component={Blogs} />
+          <Route exact path="/blog/:id" component={Detail} />
           <Route component={NoMatch} />
       	</Switch>
       </Router>

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const blogsApi = require("../../apis/blogs_api");
 
 // Matches with "/api/blogs"
-router.route("/")
+router.route("/blog")
   .get(blogsApi.findAll)
   .post(blogsApi.create);
 

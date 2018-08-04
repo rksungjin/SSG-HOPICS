@@ -93,19 +93,13 @@ date_rptd:startDate
   */
 
   render() {
-return (
 <div className="Crime">
 <div className = "Header"></div>
 <h2>Select a location</h2>
 
-
- <h2>
-
-   <div className = "custom-select">
           
-          
-          <select name="district" id="woop" value={this.state.area}
-            onChange={(e) => this.handleArea(e)} className="styleOne"
+          <select name="Place" id="place" value={this.props.place}
+            onChange={(e) => this.handleArea.bind(this,e, "place")} className="styleOne"
           >
             <option value="Wilshire" className="styleOne">Wilshire</option>
             <option value="Hollywood">Hollywood</option>
@@ -119,38 +113,17 @@ return (
             <option value="Southeast">Southeast LA</option>
             <option value="Northeast">Northeast LA</option>
             <option value="77th Street">77th Street</option>
-          </select>
           
-          </div>
-        </h2>
+          
+{this.props.newArea.map(function(option, value) {
 
-
-
-<div className="find-places">
-{this.state.newArea && this.state.newArea.map((item) => {
-
-return (
-  <div key = {item.area_id}>
-
-      
-     <p>Date Occured: {item.date_occ}</p>
-     
-     <p>Premise:{item.premis_desc}</p>
-   
-  
-  </div>
-)
+  return (<option key={value} value ={option}>{option}</option>)
 })}
+</select>
 
 </div>
-</div>
 
-);
-
-  }
-
-}
-
+  }}
 
 
 export default Crime;

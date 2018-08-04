@@ -28,7 +28,7 @@ export default class Nav extends Component {
                       <a className="page-scroll nav-left-text" href="/pricing/"><p>PRICING</p></a>
                   </li>
                   <li>
-                      <a className="page-scroll nav-left-text" href="/trips/"><p>TRIPS</p></a>
+                      <a className="page-scroll nav-left-text" href="/crime"><p>CRIME REPORT</p></a>
                   </li>
                   {this.props.authenticated ? (
                     <li>

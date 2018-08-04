@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './children/Navbar';
+import Navbar from './children/Nav';
 //import Nav from '../components/Nav'
 //import { Col, Row, Container } from "../components/Grid";
 //require('./Home.css');
@@ -10,7 +10,7 @@ export default class Home extends Component {
            
 
             <div>
-                 <Navbar />
+            <Nav />
             <section className="jumbotron" ></section>
             <div className="container mt-4 mb-4">
                 <div className="row bg-warning text-center">

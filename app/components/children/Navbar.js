@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-require('./nav.css');
+//require('./nav.css');
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">

@@ -48,14 +48,14 @@
 }
 
 .navbar-custom a {
-  color: rgb(57, 172, 233);
+  color: rgb(12, 12, 12);
 }
-.navbar-custom .nav li {
+/*.navbar-custom .nav li {
   border-top: solid 1px;
   border-bottom: solid 1px;
   border-color: rgb(57, 172, 233);
 
-}
+}*/
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;

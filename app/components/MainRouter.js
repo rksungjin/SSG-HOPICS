@@ -4,7 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import Main from "./Homepage";
+import Main from "./Main";
 import Login from "./Login";
 import Signup from "./Signup";
 import Blogs from "./blogPages/Blogs";
@@ -83,3 +83,4 @@ export default class MainRouter extends Component {
     );
   }
 }
+//export default MainRouter;

@@ -9,6 +9,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Blogs from "./blogPages/Blogs";
 import axios from 'axios';
+import Crime from "./Crime";
 
 
 export default class MainRouter extends Component {
@@ -78,6 +79,7 @@ export default class MainRouter extends Component {
             />} 
           />
         <Route exact path="/blog" component={Blogs} />
+        <Route exact path="/crime" component={Crime} />
       	</Switch>
       </Router>
     );

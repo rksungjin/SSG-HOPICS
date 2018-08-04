@@ -78,7 +78,7 @@ export default class Nav extends Component {
                   </li>
               </ul>
           </div>
-          <Link to={"/"} ><img className="icon-middle-nav-desktop" src={require("../../img/shapes/shape.png")} /></Link>
+        <Link to={"/"} ><img className="icon-middle-nav-desktop" src={require("../../img/shapes/shape.png")} /></Link>
         </div>
       </nav>
     );

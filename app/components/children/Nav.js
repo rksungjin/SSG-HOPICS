@@ -40,7 +40,7 @@ export default class Nav extends Component {
                     </li>
                   )}
                   <li>
-                      <Link to={"/protected"} ><div className="page-scroll nav-left-text" data-toggle="modal"><p>PROTECTED</p></div></Link>
+                      <Link to={"/blog"} ><div className="page-scroll nav-left-text" data-toggle="modal"><p>BLOG</p></div></Link>
                   </li>
               </ul>
           </div>

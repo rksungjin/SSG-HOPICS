@@ -124,7 +124,6 @@ return (
           </div>
         </h2>
 
-        <button onclick="removeAnOption()">Remove selected fruit</button>
 
 
 <div className="find-places">

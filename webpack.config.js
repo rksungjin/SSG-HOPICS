@@ -8,6 +8,7 @@ module.exports = {
     filename: "public/bundle.js"
   },
 
+
   // This section desribes the transformations we will perform
   module: {
     loaders: [
@@ -19,8 +20,10 @@ module.exports = {
         include: /app/,
         loader: "babel",
         query: {
+          plugins: ["transform-class-properties"],
           // These are the specific transformations we'll be using.
           presets: ["react", "es2015"]
+
         }
       },
       {test: /\.css$/, loaders: ['style', 'css']},

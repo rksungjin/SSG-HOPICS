@@ -7,7 +7,9 @@ import {
 import Main from "./Main";
 import Login from "./Login";
 import Signup from "./Signup";
+import Blogs from "./blogPages/Blogs";
 import axios from 'axios';
+
 
 export default class MainRouter extends Component {
   constructor(props) {
@@ -75,6 +77,7 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
+        <Route exact path="/blog" component={Blogs} />
       	</Switch>
       </Router>
     );

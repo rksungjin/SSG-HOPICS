@@ -28,12 +28,12 @@ export default class Main extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
-                            <h1 className="brand-heading">Homeless Outreach Program Integrated Care System</h1>
-                            <h3 className="intro-text">Secure your travel experience.</h3>
+                            <h1 className="brand-heading">Homeless</h1>
+                            <h3 className="intro-text">TEST TEST TEST TEST</h3>
                             <ul className="positives_list"> 
-                                <p>Locations of active safe zones and hospitals, police etc.</p> 
+                                <p>HELLLLLLOOOOO.</p> 
                               
-                            </ul>
+                            </ul> 
                             <a href="#about" className="btn btn-circle page-scroll">
                                 <i className="fa down-arrow animated">
                                    <img className="down-arrow" src={require("../img/shapes/HomeDown.png")} alt="Down Arrow" />
@@ -54,6 +54,7 @@ export default class Main extends Component {
                 </div>
             </div>
         </section>
+        
 
         <section id="user-comments" className="content-section text-center">
             <div className="user-feedback-section">
@@ -67,7 +68,7 @@ export default class Main extends Component {
                                         <div className="active item">
                                           <blockquote><p>ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
                                           <div className="carousel-info">
-                                            <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" className="pull-left" />
+                                            <img alt="" src="http://keenthemes.com/assets/bootsnipp/" className="pull-left" />
                                             <div className="pull-left">
                                               <span className="testimonials-name">Lina Mars</span>
                                               <span className="testimonials-post">Commercial Director</span>

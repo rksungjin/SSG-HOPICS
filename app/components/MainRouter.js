@@ -85,3 +85,4 @@ export default class MainRouter extends Component {
     );
   }
 }
+//export default MainRouter;

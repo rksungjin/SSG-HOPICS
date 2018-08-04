@@ -12,6 +12,6 @@ module.exports = function(app){
 		app.use('/apis/users', users);
 		app.use('/apis/trips', trips);
 		app.use('/apis/pricing', pricing);
-		app.use('/apis/blog', blog);
+		app.use('/apis/blogs', blog);
 		//other routes..
 }

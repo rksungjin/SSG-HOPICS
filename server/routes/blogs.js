@@ -1,8 +1,17 @@
+// var express = require('express');
+// var router  = express.Router();
+// const blogsApi = require("../apis/blogs_api");
+
+// router.get('/blog', blogsApi.findAll);
+
+// module.exports = router;
+
+
 const router = require("express").Router();
 const blogsApi = require("../apis/blogs_api");
 
 // Matches with "/api/blogs"
-router.route("/blog")
+router.route("/")
   .get(blogsApi.findAll)
   .post(blogsApi.create);
 

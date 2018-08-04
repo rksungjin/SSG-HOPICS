@@ -34,9 +34,9 @@ class Blogs extends Component {
 
   loadBlogs () {
     API.getBlogs()
-      .then(res =>
-        {this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })}
-      )
+      .then(res => {
+        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
+      })
       .catch(err => console.log(err));
   };
 
@@ -84,11 +84,12 @@ class Blogs extends Component {
               <h1>General</h1>
               This is a forum for general work-based matters
             </Jumbotron>
-            {this.state.blogs.length ? (
+            {this.state.blogs.length > 0 ? (
               <List>
+                {console.log(this.state.blogs)}
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blog/" + blog._id}>
+                    <Link to={"/blog" + blog._id}>
                       <strong>
                         <FontSizeP>
                         {blog.title}
@@ -104,7 +105,7 @@ class Blogs extends Component {
 
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     <br/>
-                    <Link to={"/blog/" + blog._id}>
+                    <Link to={"/blog" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />
                     </Link>
                   </ListItem>

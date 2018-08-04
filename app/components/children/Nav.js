@@ -6,6 +6,7 @@ require('./nav.css');
 export default class Nav extends Component {
   render() {
     return (
+      
       <nav className="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div className="container nav-container">
           <div className="navbar-header">
@@ -18,6 +19,9 @@ export default class Nav extends Component {
             
           </div>
 
+         
+
+
           <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
               <ul className="nav navbar-nav">
                   <li className="hidden">
@@ -25,7 +29,7 @@ export default class Nav extends Component {
                   </li>
                   
                   <li>
-                      <a className="page-scroll nav-right-text" href="/pricing/"><p>PRICING</p></a>
+                      <a className="page-scroll nav-right-text" href="./"><p>HOME</p></a>
                   </li>
                   <li>
                       <a className="page-scroll nav-right-text" href="/crime"><p>CRIME REPORT</p></a>

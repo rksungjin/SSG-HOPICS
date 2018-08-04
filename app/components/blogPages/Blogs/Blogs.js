@@ -9,6 +9,7 @@ import { Col, Row, Container } from "../../../components/Grid";
 import { List, ListItem } from "../../../components/List";
 import { Input, TextArea, FormBtn } from "../../../components/Form";
 
+
 class Blogs extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class Blogs extends Component {
     content: ""
     };
   }
+
 // class Blogs extends Component {
 //   state = {
 //     blogs: [],

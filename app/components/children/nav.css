@@ -160,4 +160,8 @@
   .nav-right-text p, .nav-left-text p {
     font-size: 10px;
   }
+  .nav-logo {
+    float: left !important;
+    margin-top: -15px !important;
+  }
 }

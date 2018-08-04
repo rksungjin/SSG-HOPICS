@@ -107,18 +107,18 @@ return (
           <select name="district" id="woop" value={this.state.area}
             onChange={(e) => this.handleArea(e)} className="styleOne"
           >
-            <option value="Wilshire" className="styleOne">Wilshire</option>
-            <option value="Hollywood">Hollywood</option>
-            <option value="Van Nuys">Van Nuys</option>
-            <option value="Olympic">Olympic</option>
-            <option value="Mission">Mission</option>
-            <option value="West Valley">West Valley</option>
-            <option value="West LA">West LA</option>
-            <option value="Central">Central LA</option>
-            <option value="N Hollywood">North Hollywood</option>
-            <option value="Southeast">Southeast LA</option>
-            <option value="Northeast">Northeast LA</option>
-            <option value="77th Street">77th Street</option>
+            <option value="Wilshire" className="styleOne" key="Wilshire">Wilshire</option>
+            <option value="Hollywood" key="Hollywood">Hollywood</option>
+            <option value="Van Nuys" key="Van Nuys">Van Nuys</option>
+            <option value="Olympic" key="Olympic">Olympic</option>
+            <option value="Mission" key="Mission">Mission</option>
+            <option value="West Valley" key="West Valley">West Valley</option>
+            <option value="West LA" key="West LA">West LA</option>
+            <option value="Central "key="Central">Central LA</option>
+            <option value="N Hollywood" key="N Hollywood">North Hollywood</option>
+            <option value="Southeast" key="Southeast">Southeast LA</option>
+            <option value="Northeast" key="Northeast">Northeast LA</option>
+            <option value="77th Street "key="77th Street">77th Street</option>
           </select>
           
           </div>
@@ -128,9 +128,9 @@ return (
 
 <div className="find-places">
 {this.state.newArea && this.state.newArea.map((item) => {
-
+console.log("item", item)
 return (
-  <div key = {item.area_id}>
+  <div>
 
       
      <p>Date Occured: {item.date_occ}</p>
@@ -154,6 +154,5 @@ return (
 
 
 export default Crime;
-
 
 

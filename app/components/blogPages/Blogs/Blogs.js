@@ -1,30 +1,41 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
-import EditBtn from "../../components/EditBtn";
-import Jumbotron from "../../components/Jumbotron";
-import FontSizeP from "../../components/FontSize/FontSizeP";
+import DeleteBtn from "../../../components/DeleteBtn";
+import EditBtn from "../../../components/EditBtn";
+import Jumbotron from "../../../components/Jumbotron";
+import FontSizeP from "../../../components/FontSize/FontSizeP";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Col, Row, Container } from "../../../components/Grid";
+import { List, ListItem } from "../../../components/List";
+import { Input, TextArea, FormBtn } from "../../../components/Form";
 
 class Blogs extends Component {
-  state = {
+  constructor(props) {
+    super(props);
+
+    this.state = {
     blogs: [],
     title: "",
     postedBy: "",
     content: ""
-  };
+    };
+  }
+// class Blogs extends Component {
+//   state = {
+//     blogs: [],
+//     title: "",
+//     postedBy: "",
+//     content: ""
+//   };
 
   componentDidMount() {
     this.loadBlogs();
   }
 
-  loadBlogs = () => {
+  loadBlogs () {
     API.getBlogs()
       .then(res =>
-        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
+        {this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })}
       )
       .catch(err => console.log(err));
   };

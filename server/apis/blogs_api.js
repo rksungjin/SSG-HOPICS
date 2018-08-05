@@ -1,23 +1,23 @@
-// const db = require("../models/Blog");
+// var db  = require('../models/Blog');
 
 // exports.index = function(req, res) {
-// 	Blog
-//   .find({})
+// 	db
+//   .find()
 //   // .where('UserId').equals(req.user.id)
-//   .then(function(dbBlog) {
-//     res.render(Blog, {
-// 		  blog: dbBlog
+//   .then(function(dbBLog) {
+//     res.render('apis/blogs', {
+// 		  blogs: dbBLog
 // 	  });
 //   });
 // };
 
-const db = require("../models/Blog");
+const db = require("../models");
 
 //Defining methods for the blogsController
 module.exports = {
   findAll: function(req, res) {
     db.Blog
-      .find({})
+      .find(req.query)
       .sort({ date: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

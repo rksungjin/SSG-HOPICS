@@ -1,6 +1,19 @@
-const db = require("../models/Blog");
+// var db  = require('../models/Blog');
 
-// Defining methods for the blogsController
+// exports.index = function(req, res) {
+// 	db
+//   .find()
+//   // .where('UserId').equals(req.user.id)
+//   .then(function(dbBLog) {
+//     res.render('apis/blogs', {
+// 		  blogs: dbBLog
+// 	  });
+//   });
+// };
+
+const db = require("../models");
+
+//Defining methods for the blogsController
 module.exports = {
   findAll: function(req, res) {
     db.Blog

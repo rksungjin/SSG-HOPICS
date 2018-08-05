@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "webpack --watch & nodemon ./server/bin/www",
     "start": "nodemon ./server/bin/www",
-    "build": "webpack"
+    "build": "webpack",
+    "seed": "node scripts/seedDB.js"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",

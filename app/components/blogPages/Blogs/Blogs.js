@@ -98,11 +98,10 @@ class Blogs extends Component {
                         Posted by  {blog.postedBy} on {blog.date}
                         </FontSizeP>
                       </strong>
+                       <FontSizeP>
+                          {blog.content}
+                      </FontSizeP>
                     </Link>
-                    <FontSizeP>
-                    {blog.content}
-                    </FontSizeP>
-
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     <br/>
                     <Link to={"/blog" + blog._id}>

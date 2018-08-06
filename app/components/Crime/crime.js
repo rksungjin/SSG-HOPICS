@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './crime.css';
+//import './crime.css';
 import axios from "axios";
 
 

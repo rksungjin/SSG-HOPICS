@@ -89,7 +89,7 @@ class Blogs extends Component {
                 {console.log(this.state.blogs)}
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blog" + blog._id}>
+                    {/*<Link to={"/blog" + blog._id}>*/}
                       <strong>
                         <FontSizeP>
                         {blog.title}
@@ -101,7 +101,7 @@ class Blogs extends Component {
                        <FontSizeP>
                           {blog.content}
                       </FontSizeP>
-                    </Link>
+                    {/*</Link>*/}
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     <br/>
                     <Link to={"/blog" + blog._id}>

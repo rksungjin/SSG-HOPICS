@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-require('./nav.css');
+//require('./nav.css');
 
 export default class Nav extends Component {
   render() {

@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
 import Nav from './children/Nav'
 
-require('./signup.css');
+//require('./signup.css');
 
 export default class Signup extends Component { 
 
@@ -228,7 +228,7 @@ export default class Signup extends Component {
 						<div className="container-page">		
 						<form onSubmit={this.handleSubmit.bind(this)}>		
 							<div className="col-md-6">
-								<h3 className="dark-grey">Registration</h3>
+								<h3 className="">Registration</h3>
 								
 								<div id="username-form" ref="usernameForm" className="form-group col-lg-12">
 									<label>Username</label>

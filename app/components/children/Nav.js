@@ -3,10 +3,60 @@ import { Link } from 'react-router-dom';
 
 //require('./nav.css');
 
+
+
+
+
+
+
+
 export default class Nav extends Component {
   render() {
     return (
-      <nav className="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div>
+        <nav className="navbar fixed-top navbar-expand-lg navbar-custom navbar-light">
+          <Link to={"/"}><div className="navbar-brand">SSG-HOPICS</div></Link>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarText">
+          {this.props.authenticated ? (
+            <ul className="navbar-nav ml-auto">
+              
+              <li>
+                <Link to={"/crime"} ><div className="nav-link" data-toggle="modal"><p>CRIME REPORT</p></div></Link>
+              </li>
+              <li>
+                  <Link to={"/blog"} ><div className="nav-link" data-toggle="modal"><p>BLOG</p></div></Link>
+              </li>
+              {/*{this.props.authenticated ? ( */}
+                <li>
+                  <Link to={"/logout"} onClick={this.props.logout} ><div className="nav-link" data-toggle="modal"><p>LOGOUT</p></div></Link>
+                </li>
+            </ul>
+              ) : (
+                <ul className="navbar-nav ml-auto">
+                <li>
+                  <Link to={"/login"} ><div className="nav-link" data-toggle="modal"><p>LOGIN</p></div></Link>
+                </li>
+                </ul>
+              )}
+            {/*</ul>*/}
+          </div>
+        </nav>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      /*<nav className="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div className="container nav-container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -45,7 +95,7 @@ export default class Nav extends Component {
               </ul>
           </div>
         </div>
-      </nav>
+      </nav>*/
     );
   }
 }

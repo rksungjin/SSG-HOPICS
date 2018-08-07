@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import './crime.css';
 import axios from "axios";
-
+import Nav from '../children/Nav'
 
 class Crime extends Component {
 
@@ -94,6 +94,13 @@ date_rptd:startDate
 
   render() {
 return (
+  <div>
+    <Nav
+      authenticated={this.props.authenticated}
+      authenticate={this.props.authenticate}
+      deAuthenticate={this.props.deAuthenticate}
+      logout={this.props.logout}
+    />   
 <div className="Crime">
 <div className = "Header"></div>
 <h2>Select a location</h2>
@@ -144,7 +151,7 @@ return (
 
 </div>
 </div>
-
+</div>
 );
 
   }

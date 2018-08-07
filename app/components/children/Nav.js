@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 //require('./nav.css');
 
 
-
-
-
-
-
-
 export default class Nav extends Component {
   render() {
     return (
@@ -31,7 +25,7 @@ export default class Nav extends Component {
               </li>
               {/*{this.props.authenticated ? ( */}
                 <li>
-                  <Link to={"/logout"} onClick={this.props.logout} ><div className="nav-link" data-toggle="modal"><p>LOGOUT</p></div></Link>
+                  <Link to={"/"} onClick={this.props.logout} ><div className="nav-link" data-toggle="modal"><p>LOGOUT</p></div></Link>
                 </li>
             </ul>
               ) : (

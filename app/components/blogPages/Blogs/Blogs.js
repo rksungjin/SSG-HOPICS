@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../../components/Grid";
 import { List, ListItem } from "../../../components/List";
 import { Input, TextArea, FormBtn } from "../../../components/Form";
-import Nav from '../../children/Nav'
+import Nav from '../../children/Nav';
+//import Detail from './Detail';
 
 class Blogs extends Component {
   constructor(props) {
@@ -114,9 +115,10 @@ class Blogs extends Component {
                       </FontSizeP>
                     {/*</Link>*/}
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
-                    <br/>
-                    <Link to={"/blog" + blog._id}>
+        
+                    <Link to={"/blog/" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />
+        
                     </Link>
                   </ListItem>
                 ))}

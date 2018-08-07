@@ -9,11 +9,12 @@ export default class Nav extends Component {
     return (
       <div>
         <nav className="navbar fixed-top navbar-expand-lg navbar-custom navbar-light">
-          <Link to={"/"}><div className="navbar-brand">SSG-HOPICS</div></Link>
+          <Link to={"/"}><div className="navbar-brand disabled">SSG-HOPICS</div></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
+
           {this.props.authenticated ? (
             <ul className="navbar-nav ml-auto">
               

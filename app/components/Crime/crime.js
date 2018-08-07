@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import './crime.css';
 import axios from "axios";
-import Nav from '../children/Nav'
+import Nav from '../children/Nav';
 
 class Crime extends Component {
 

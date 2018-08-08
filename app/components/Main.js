@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Nav from './children/Nav'
 
-//require('./main.css');
+require('./main2.css');
 
 // Here we include all of the sub-components
 // var Form = require("./children/Form");
@@ -28,17 +28,8 @@ export default class Main extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 col-md-offset-2">
-                            <h1 className="brand-heading">Homeless</h1>
-                            <h3 className="intro-text">TEST TEST TEST TEST</h3>
-                            <ul className="positives_list"> 
-                                <p>HELLLLLLOOOOO.</p> 
-                              
-                            </ul> 
-                            <a href="#about" className="btn btn-circle page-scroll">
-                                <i className="fa down-arrow animated">
-                                   <img className="down-arrow" src={require("../img/shapes/HomeDown.png")} alt="Down Arrow" />
-                                </i>
-                            </a>
+
+                            
                         </div>
                     </div>
                 </div>

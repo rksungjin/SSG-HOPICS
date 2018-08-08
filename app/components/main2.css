@@ -1,0 +1,17 @@
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 36% 0;
+    text-align: center;
+    background: url(../img/homeless2.jpg) no-repeat center scroll;
+    color: white;
+    background-color: black;
+    margin-top: 6em;
+  }
+
+.about {
+    text-align: center; 
+    font: red;
+
+}

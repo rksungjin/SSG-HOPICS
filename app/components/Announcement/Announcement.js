@@ -34,8 +34,8 @@ export default class Announcement extends Component {
             <section id="about" className="container content-section text-center">
                 <div className="row">
                     <div className="col-lg-12 col-lg">
-                        <h2>Our Mission</h2> 
-                        <p>To provide the best quality of service to homeless and low-income households in South Los Angeles and surrounding areas and to employ the most qualified staff available and build our services and programs to meet the diverse needs of the community.</p>
+                        <h2>CES System Meeting</h2> 
+                        <p>This Wednesday out CES System Meeting will be held at </p>
                     </div>
                 </div>     
                 

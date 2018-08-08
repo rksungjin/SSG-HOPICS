@@ -47,7 +47,7 @@ class Detail extends Component {
 
   handleEditSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.postedBy) {
+    if (this.props.match.params.id) {
       API.editBlog({
         title: this.state.title,
         postedBy: this.state.postedBy,
@@ -96,7 +96,7 @@ class Detail extends Component {
               <FormBtn
                 disabled={!(this.state.postedBy && this.state.title)}
                 // onClick={() => this.deleteBlog(blog._id)}
-                onClick={this.handleFormSubmit}
+                onClick={this.handleEditSubmit}
                 
               >
                 Submit a Post

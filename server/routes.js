@@ -13,5 +13,6 @@ module.exports = function(app){
 		app.use('/apis/trips', trips);
 		app.use('/apis/pricing', pricing);
 		app.use('/apis/blogs', blog);
+		// app.use('/apis/blogs/:id', blog);
 		//other routes..
 }

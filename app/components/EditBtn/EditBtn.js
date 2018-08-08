@@ -4,9 +4,11 @@ import "./EditBtn.css";
 // The ...props means, spread all of the passed props onto this element
 // That way we don't have to define them all individually
 const EditBtn = props => (
-  <button type="button" className="btn btn-link edit-btn">
+  <span className="btn btn-link edit-btn" {...props}>
     Edit
-  </button>
+  </span>
 );
 
 export default EditBtn;
+
+

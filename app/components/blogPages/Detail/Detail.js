@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
+import Jumbotron from "../../Jumbotron";
 import API from "../../utils/API";
-//import EditBtn from "../../components/EditBtn";
+// import EditBtn from "../../components/EditBtn";
 //import FontSizeP from "../../components/FontSize/FontSizeP";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../../Grid";
 //import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtn } from "../../Form";
 
 
 
@@ -25,6 +25,30 @@ class Detail extends Component {
       .then(res => this.setState({ blog: res.data }))
       .catch(err => console.log(err));
   }
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.postedBy) {
+      API.saveBlog({
+        title: this.state.title,
+        postedBy: this.state.postedBy,
+        content: this.state.content
+      })
+        .then(res => this.loadBlogs())
+        .catch(err => console.log(err));
+    }
+    deleteBlog = id => {
+      API.deleteBlog(id)
+        .then(res => this.loadBlogs())
+        .catch(err => console.log(err));
+    };
+  };
 
   render() {
     return (
@@ -63,7 +87,9 @@ class Detail extends Component {
               />
               <FormBtn
                 disabled={!(this.state.postedBy && this.state.title)}
+                onClick={() => this.deleteBlog(blog._id)}
                 onClick={this.handleFormSubmit}
+                
               >
                 Submit a Post
               </FormBtn>
@@ -78,17 +104,22 @@ class Detail extends Component {
             <article>
               <h1>Synopsis</h1>
               <p>
-                {this.state.blog.synopsis}
+                {this.state.blog.content}
+              </p>
+              <p>
+                {this.state.blog.id}
               </p>
             </article>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to General Blog Page</Link>
+            <Link to="/blog">← Back to General Blog Page</Link>
           </Col>
         </Row>
+        {/* <EditBtn onClick={() => this.editBlog(blog._id)} /> */}
       </Container>
+      
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-//import EditBtn from "../../components/EditBtn";
+// import EditBtn from "../../components/EditBtn";
 //import FontSizeP from "../../components/FontSize/FontSizeP";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -88,7 +88,9 @@ class Detail extends Component {
             <Link to="/">← Back to General Blog Page</Link>
           </Col>
         </Row>
+        {/* <EditBtn onClick={() => this.editBlog(blog._id)} /> */}
       </Container>
+      
     );
   }
 }

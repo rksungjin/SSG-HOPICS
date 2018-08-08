@@ -12,14 +12,14 @@ const Blog = mongoose.model("Blog", blogSchema);
 
 module.exports = Blog;
 
-Blog.associate = function(models) {
-  // We're saying that a Blog should belong to an Author
-  // A Blog can't be created without an Author due to the foreign key constraint
-  Blog.belongsTo(models.User, {
-    foreignKey: {
-      allowNull: false
-    }
-  });
-};
+// Blog.associate = function(models) {
+//   // We're saying that a Blog should belong to an Author
+//   // A Blog can't be created without an Author due to the foreign key constraint
+//   Blog.belongsTo(models.User, {
+//     foreignKey: {
+//       allowNull: false
+//     }
+//   });
+// };
 
-return Blog;
+// return Blog;

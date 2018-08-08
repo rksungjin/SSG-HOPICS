@@ -10,6 +10,7 @@ import Signup from "./Signup";
 import Blogs from "./blogPages/Blogs";
 import axios from 'axios';
 import Crime from "./Crime";
+import EditBtn from './EditBtn';
 
 
 
@@ -99,6 +100,15 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
+            {/* <Route exact path="/edit" render={props => 
+            <EditBtn
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+          /> */}
 
       	</Switch>
       </Router>

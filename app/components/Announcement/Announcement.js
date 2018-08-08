@@ -1,6 +1,7 @@
 // Include React
 import React, { Component } from 'react';
 import Nav from '../children/Nav'
+import './Announcement.css';
 
 // Creating the Main component
 export default class Announcement extends Component {
@@ -17,9 +18,9 @@ export default class Announcement extends Component {
        
 
 
-            <header className="mt-5">
+            <header className="Announcement">
                 <div className="">
-                    <div className="container mt-5">
+                    <div className="container">
                         <div className="row">
                             <div className="col-md-8 col-md-offset-2">
                                 <h1> testing of Announcement Page</h1>

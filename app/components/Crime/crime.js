@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './crime.css';
+import './crime.css';
 import axios from "axios";
 import Nav from '../children/Nav';
 
@@ -108,7 +108,7 @@ return (
  <h2>Highlighted Incidents</h2>
 
 <h2>
-   <div className = "custom-select">
+   <div>
           
           
           <select name="district" id="woop" value={this.state.area}

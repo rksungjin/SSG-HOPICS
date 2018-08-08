@@ -105,7 +105,7 @@ class Detail extends Component {
             <article>
               <h1>Synopsis</h1>
               <p>
-                {this.state.blog.synopsis}
+                {this.state.blog.content}
               </p>
             </article>
           </Col>

@@ -1,6 +1,5 @@
 .intro {
-    display: table;
-    width: 100%;
+    width: 100% !important;
     height: auto;
     padding: 33% 0;
     text-align: center;
@@ -15,3 +14,17 @@
     font: red;
 
 }
+.body2 {
+    text-align: center; 
+    padding: 5%;
+    font-family: "Chalkboard", Times, serif;
+    font-size: 23px;
+
+}
+.footer {
+    padding: 3%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+

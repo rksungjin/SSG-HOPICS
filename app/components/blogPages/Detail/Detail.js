@@ -35,7 +35,7 @@ class Detail extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.postedBy) {
-      API.saveBlog({
+      API.editBlog({
         title: this.state.title,
         postedBy: this.state.postedBy,
         content: this.state.content
@@ -112,7 +112,7 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to General Blog Page</Link>
+            <Link to="/blog">← Back to General Blog Page</Link>
           </Col>
         </Row>
         {/* <EditBtn onClick={() => this.editBlog(blog._id)} /> */}

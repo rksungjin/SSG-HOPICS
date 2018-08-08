@@ -124,10 +124,10 @@ class Blogs extends Component {
                     </Link>
                     </EditBtn> */}
         
-                    <Link to={"/blog" + blog._id}>
+                    {/* <Link to={"/blog" + blog._id}>
                  
         
-                    </Link>
+                    </Link> */}
                   </ListItem>
                 ))}
               </List>

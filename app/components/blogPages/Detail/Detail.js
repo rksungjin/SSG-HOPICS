@@ -43,6 +43,11 @@ class Detail extends Component {
         .then(res => this.loadBlogs())
         .catch(err => console.log(err));
     }
+    deleteBlog = id => {
+      API.deleteBlog(id)
+        .then(res => this.loadBlogs())
+        .catch(err => console.log(err));
+    };
   };
 
   render() {
@@ -82,7 +87,9 @@ class Detail extends Component {
               />
               <FormBtn
                 disabled={!(this.state.postedBy && this.state.title)}
+                onClick={() => this.deleteBlog(blog._id)}
                 onClick={this.handleFormSubmit}
+                
               >
                 Submit a Post
               </FormBtn>
@@ -98,6 +105,9 @@ class Detail extends Component {
               <h1>Synopsis</h1>
               <p>
                 {this.state.blog.content}
+              </p>
+              <p>
+                {this.state.blog.id}
               </p>
             </article>
           </Col>

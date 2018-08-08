@@ -9,6 +9,10 @@
 
 const router = require("express").Router();
 const blogsApi = require("../apis/blogs_api");
+// const apiRoutes = require("../apis/blogs");
+
+// API Routes
+// router.use("/api", apiRoutes);
 
 // Matches with "/api/blogs"
 router.route("/")
@@ -22,3 +26,4 @@ router.route("/:id")
   .delete(blogsApi.remove);
 
 module.exports = router;
+

@@ -1,4 +1,4 @@
-.App {
+.Crime {
     text-align: center;
   }
   
@@ -24,18 +24,67 @@
   }
   
   .styleOne {
-  background-color: azure;
+  background-color: rgb(128, 35, 35);
   padding: 8px 16px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+
   
   
   }
   
   .find-places{
   background-origin: padding-box;
+  text-align: center;
   
+  }
+
+  .custom-select{
+    text-align: center;
+  }
+
+  .data {
+    text-align: center;
+    color: black;
+    border-style: ridge;
+    padding: 15px;
+    border-block-end: 0ex;
+  }
+
+  h2{
+    color: black;
+    text-align: center;
+  }
+
+  p.dating{
+    font-size: 20px;
+    -webkit-flow-into: initial;
+  }
+
+  p.premising{
+    font-size: 16px;
+  }
+
+  p.incidenting{
+    font-size: 16px;
+  }
+
+  .find-places{
+    width: 600px;
+    text-align: center;
+    float: initial;
+    margin: auto;
+    background-color: aliceblue;
+  }
+
+  p.omg{
+    font-size: 19px;
+  }
+
+  p.cross{
+    font-size: 16px;
   }

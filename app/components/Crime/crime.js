@@ -103,11 +103,11 @@ return (
     />   
 <div className="Crime">
 <div className = "Header"></div>
-<h2>Select a location</h2>
 
 
- <h2>
+ <h2>Highlighted Incidents</h2>
 
+<h2>
    <div className = "custom-select">
           
           
@@ -121,11 +121,9 @@ return (
             <option value="Mission" key="Mission">Mission</option>
             <option value="West Valley" key="West Valley">West Valley</option>
             <option value="West LA" key="West LA">West LA</option>
-            <option value="Central "key="Central">Central LA</option>
             <option value="N Hollywood" key="N Hollywood">North Hollywood</option>
             <option value="Southeast" key="Southeast">Southeast LA</option>
             <option value="Northeast" key="Northeast">Northeast LA</option>
-            <option value="77th Street "key="77th Street">77th Street</option>
           </select>
           
           </div>
@@ -137,13 +135,25 @@ return (
 {this.state.newArea && this.state.newArea.map((item) => {
 console.log("item", item)
 return (
-  <div>
+  <div className="data">
 
       
-     <p>Date Occured: {item.date_occ}</p>
+     <p className="dating"><b>Date Occured:</b> {item.date_occ}</p>
+
+       <p className="incidenting"><b>Incident:</b> {item.crm_cd_desc}</p>
+
+     <p className="premising"><b>Premise:</b> {item.premis_desc}</p>
+
+     <p className="omg"><b>Address:</b> {item.location}</p>
+
      
-     <p>Premise:{item.premis_desc}</p>
-   
+     <p className="cross"><b>Cross Street:</b> {item.cross_street}</p>
+
+      <p><b>Age:</b> {item.vict_age}</p>
+
+      <p><b>Sex:</b> {item.vict_sex}</p>
+
+    
   
   </div>
 )

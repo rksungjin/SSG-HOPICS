@@ -10,6 +10,7 @@ import Signup from "./Signup";
 import Blogs from "./blogPages/Blogs";
 import axios from 'axios';
 import Crime from "./Crime";
+import Announcement from "./Announcement";
 // import Detail from './Detail';
 import Detail from './blogPages/Detail';
 
@@ -75,6 +76,15 @@ export default class MainRouter extends Component {
           />
           <Route exact path="/signup" render={props => 
             <Signup
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+          />
+          <Route exact path="/announcement" render={props => 
+            <Announcement
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}

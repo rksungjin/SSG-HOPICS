@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../../components/Grid";
 import { List, ListItem } from "../../../components/List";
 import { Input, TextArea, FormBtn } from "../../../components/Form";
+import Nav from '../../children/Nav';
+//import Detail from './Detail';
 
 class Blogs extends Component {
   constructor(props) {
@@ -75,7 +77,17 @@ class Blogs extends Component {
   };
 
   render() {
+
+
     return (
+      <div>
+        <Nav
+          authenticated={this.props.authenticated}
+          authenticate={this.props.authenticate}
+          deAuthenticate={this.props.deAuthenticate}
+          logout={this.props.logout}
+        />  
+
       <Container fluid>
         <Row>
           <Col size="md-3 sm-0"></Col>
@@ -89,7 +101,7 @@ class Blogs extends Component {
                 {console.log(this.state.blogs)}
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blog" + blog._id}>
+                    {/*<Link to={"/blog" + blog._id}>*/}
                       <strong>
                         <FontSizeP>
                         {blog.title}
@@ -101,11 +113,12 @@ class Blogs extends Component {
                        <FontSizeP>
                           {blog.content}
                       </FontSizeP>
-                    </Link>
+                    {/*</Link>*/}
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
-                    <br/>
-                    <Link to={"/blog" + blog._id}>
+        
+                    <Link to={"/blog/" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />
+        
                     </Link>
                   </ListItem>
                 ))}
@@ -149,6 +162,7 @@ class Blogs extends Component {
           <Col size="md-3 sm-0"></Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }

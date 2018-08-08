@@ -12,6 +12,7 @@ import axios from 'axios';
 import Crime from "./Crime";
 
 
+
 export default class MainRouter extends Component {
   constructor(props) {
     super(props);
@@ -78,8 +79,27 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
-        <Route exact path="/blog" component={Blogs} />
-        <Route exact path="/crime" component={Crime} />
+        {/*<Route exact path="/blog" component={Blogs} /> */}
+        <Route exact path="/blog" render={props => 
+            <Blogs
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+          />
+        {/*<Route exact path="/crime" component={Crime} />*/}
+        <Route exact path="/crime" render={props => 
+            <Crime
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+          />
+
       	</Switch>
       </Router>
     );

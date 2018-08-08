@@ -10,7 +10,7 @@ import Signup from "./Signup";
 import Blogs from "./blogPages/Blogs";
 import axios from 'axios';
 import Crime from "./Crime";
-//import Detail from "./blogPages/Detail";
+
 
 
 export default class MainRouter extends Component {
@@ -99,7 +99,7 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
-        {/*<Route exact path="/blogs/:id" component={Detail} />*/}
+
       	</Switch>
       </Router>
     );

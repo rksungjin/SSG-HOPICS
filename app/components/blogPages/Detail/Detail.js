@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
+import Jumbotron from "../../Jumbotron";
 import API from "../../utils/API";
 // import EditBtn from "../../components/EditBtn";
 //import FontSizeP from "../../components/FontSize/FontSizeP";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../../Grid";
 //import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtn } from "../../Form";
 
 
 

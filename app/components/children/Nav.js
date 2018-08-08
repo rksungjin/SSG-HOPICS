@@ -17,13 +17,16 @@ export default class Nav extends Component {
 
           {this.props.authenticated ? (
             <ul className="navbar-nav ml-auto">
-              
               <li>
-                <Link to={"/crime"} ><div className="nav-link" data-toggle="modal"><p>CRIME REPORT</p></div></Link>
+                  <Link to={"/announcement"} ><div className="nav-link" data-toggle="modal"><p>ANNOUNCEMENTS</p></div></Link>
               </li>
               <li>
                   <Link to={"/blog"} ><div className="nav-link" data-toggle="modal"><p>BLOG</p></div></Link>
               </li>
+              <li>
+                <Link to={"/crime"} ><div className="nav-link" data-toggle="modal"><p>CRIME REPORT</p></div></Link>
+              </li>
+              
               {/*{this.props.authenticated ? ( */}
                 <li>
                   <Link to={"/"} onClick={this.props.logout} ><div className="nav-link" data-toggle="modal"><p>LOGOUT</p></div></Link>

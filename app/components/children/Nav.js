@@ -8,7 +8,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-custom navbar-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-custom navbar-light bg-white">
           <Link to={"/"}><div className="navbar-brand disabled">SSG-HOPICS</div></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

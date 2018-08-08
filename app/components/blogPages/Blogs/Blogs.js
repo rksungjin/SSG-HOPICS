@@ -101,7 +101,7 @@ class Blogs extends Component {
                 {console.log(this.state.blogs)}
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blog" + blog._id}>
+                    <Link to={"/blog/" + blog._id}>
                       <strong>
                         <FontSizeP>
                         {blog.title}

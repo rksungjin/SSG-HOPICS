@@ -111,7 +111,16 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           /> */}
-        <Route exact path="/blog/:id" component={Detail} />
+            <Route exact path="/blog/:id" render={props => 
+            <Detail
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+          />
+        {/* <Route exact path="/blog/:id" component={Detail} /> */}
       	</Switch>
       </Router>
     );

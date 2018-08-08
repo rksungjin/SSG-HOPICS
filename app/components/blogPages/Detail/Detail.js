@@ -25,6 +25,33 @@ class Detail extends Component {
       .then(res => this.setState({ blog: res.data }))
       .catch(err => console.log(err));
   }
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.postedBy) {
+      API.saveBlog({
+        title: this.state.title,
+        postedBy: this.state.postedBy,
+        content: this.state.content
+      })
+        .then(res => this.loadBlogs())
+        .catch(err => console.log(err));
+    }
+  };
+
+  loadBlogs () {
+    API.getBlogs()
+      .then(res => {
+        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
+      })
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (

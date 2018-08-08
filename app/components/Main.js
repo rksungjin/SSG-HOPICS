@@ -40,7 +40,7 @@ export default class Main extends Component {
             <div className="row">
                 <div className="col-lg-12 col-lg">
                     <h2>Our Mission</h2> 
-                    <p>To provide the best quality of service to homeless and low-income households in South Los Angeles and surrounding areas and to employ the most qualified staff availableand build our services and programs to meet the diverse needs of the community.</p>
+                    <p>To provide the best quality of service to homeless and low-income households in South Los Angeles and surrounding areas and to employ the most qualified staff available and build our services and programs to meet the diverse needs of the community.</p>
                 </div>
             </div>
         </section>

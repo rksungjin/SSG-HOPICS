@@ -32,10 +32,23 @@ class Detail extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.title && this.state.postedBy) {
+  //     API.saveBlog({
+  //       title: this.state.title,
+  //       postedBy: this.state.postedBy,
+  //       content: this.state.content
+  //     })
+  //       .then(res => this.loadBlogs())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
+
+  handleEditSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.postedBy) {
-      API.saveBlog({
+      API.editBlog({
         title: this.state.title,
         postedBy: this.state.postedBy,
         content: this.state.content
@@ -43,11 +56,6 @@ class Detail extends Component {
         .then(res => this.loadBlogs())
         .catch(err => console.log(err));
     }
-    deleteBlog = id => {
-      API.deleteBlog(id)
-        .then(res => this.loadBlogs())
-        .catch(err => console.log(err));
-    };
   };
 
   render() {
@@ -87,7 +95,7 @@ class Detail extends Component {
               />
               <FormBtn
                 disabled={!(this.state.postedBy && this.state.title)}
-                onClick={() => this.deleteBlog(blog._id)}
+                // onClick={() => this.deleteBlog(blog._id)}
                 onClick={this.handleFormSubmit}
                 
               >

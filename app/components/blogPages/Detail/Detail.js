@@ -31,6 +31,13 @@ class Detail extends Component {
       [name]: value
     });
   };
+  loadBlogs () {
+    API.getBlogs()
+      .then(res => {
+        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
+      })
+      .catch(err => console.log(err));
+  };
 
   // handleFormSubmit = event => {
   //   event.preventDefault();
@@ -53,11 +60,11 @@ class Detail extends Component {
   // }
 
   //insert specific routing - blog/:id/title:, content:
-  editBlog = event => {
+  handleEditBlog = event => {
     event.preventDefault();
     if (this.props.match.params.id) {
-      // console.log("hi")
-      API.editBlog({
+      console.log(this.state)
+      API.editBlog(this.props.match.params.id, {
         title: this.state.title,
         postedBy: this.state.postedBy,
         content: this.state.content
@@ -66,8 +73,11 @@ class Detail extends Component {
         .catch(err => console.log(err));
     }
   };
+  //remove post then repost*
 
-  // editBlog = id => {
+  
+
+  // handleEditBlog = id => {
   //   API.editBlog(id)
   //     .then(res => this.loadBlogs())
   //     .catch(err => console.log(err));
@@ -109,9 +119,9 @@ class Detail extends Component {
 
               />
               <FormBtn
-                disabled={!(this.state.postedBy && this.state.title)}
+                // disabled={!(this.state.postedBy && this.state.title)}
                 // onClick={() => this.deleteBlog(blog._id)}
-                onClick={this.editBlog}
+                onClick={this.handleEditBlog}
                 
               >
                 Update Post

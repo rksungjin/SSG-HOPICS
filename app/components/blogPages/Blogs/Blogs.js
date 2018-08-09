@@ -127,7 +127,6 @@ class Blogs extends Component {
                        <FontSizeP>
                           {blog.content}
                       </FontSizeP>
-                    //onc
                     <Link to={"/blog/" + blog._id}>
                     <EditBtn onClick={() => this.editBlog(blog._id)} />    
                     </Link>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
+  Redirect,
   Route,
   Switch
 } from 'react-router-dom'
@@ -52,7 +53,14 @@ export default class MainRouter extends Component {
       });
   }
 
+  redirect = () => {
+      if (this.state.authenticated === false) {
+        return <Redirect to='/signup' />
+      }
+  }
+
   render() {
+    // this.redirect();
     return (
       <Router>
       	<Switch>
@@ -104,6 +112,7 @@ export default class MainRouter extends Component {
           />
         {/*<Route exact path="/crime" component={Crime} />*/}
         <Route exact path="/crime" render={props => 
+          !this.state.authenticated ? this.redirect() : 
             <Crime
               {...props}
               authenticate={this.authenticate}

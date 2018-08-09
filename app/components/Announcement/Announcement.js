@@ -15,11 +15,11 @@ export default class Announcement extends Component {
             logout={this.props.logout}
             />   
 
-            <header className="Announcement" id="announcement-header">
+            <header className="Announcement mt-5" id="announcement-header">
                     <div className="container-fluid text-center border-bottom border-dark">
-                        <div className="row pb-1 bg-primary mb-4 text-primary">this invisible blue line
+                        <div className="row pb-1 bg-dark mb-4 text-dark">this invisible black text
                         </div>
-                        <div className="row p-4 bg-primary text-white">
+                        <div className="row p-4 bg-dark text-white">
                             <div className="col-lg-12">
                                 <h1 className="text-center"> ANNOUNCEMENTS</h1> 
                             </div>
@@ -145,13 +145,13 @@ export default class Announcement extends Component {
                                     <li>
                                     <h5 className="text-primary">Psychiatric Mobile Response Team</h5>
                                         <p>call (310) 482-3260</p>
-                                        <p>Teams hae legal authority per Welfare and Institutions Code 5150 and 5585</p>
+                                        <p>Teams have legal authority per Welfare and Institutions Code 5150 and 5585</p>
                                         <br />
                                     </li>
                                     <li>
                                     <h5 className="text-primary">Whole Person Care</h5>
                                         <p>for referrals call (844) 804-5200</p>
-                                        <p>Whole Person Care focuses on the following: 1) People experiencing homelessness, 2) People recently released from incarceration 3) People with mental health issues 4) People experiencing substance use disorder 5) People with multiple medical conditions 60 Women experiencing barriers to a healthy pregnancy</p>
+                                        <p>Whole Person Care focuses on the following: 1) People experiencing homelessness, 2) People recently released from incarceration 3) People with mental health issues 4) People experiencing substance use disorder 5) People with multiple medical conditions 6) Women experiencing barriers to a healthy pregnancy</p>
                                         <br />
                                     </li>
 

@@ -102,14 +102,25 @@ class Blogs extends Component {
           logout={this.props.logout}
         />  
 
-      <Container fluid>
+        <header className="BlogsHead mt-5" id="blog-header">
+          <div className="container-fluid text-center border-bottom border-dark">
+              <div className="row pb-1 bg-dark mb-4 text-dark">this invisible black text
+              </div>
+              <div className="row p-4 bg-dark text-white">
+                  <div className="col-lg-12">
+                      <h1 className="text-center">BLOG</h1> 
+                      <p className="text-center">This is a forum for general work-based matters</p>
+                  </div>
+              </div>
+          </div>
+        </header>
+
+        <div className="container-fluid">
         <Row>
           <Col size="md-3 sm-0"></Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>General</h1>
-              This is a forum for general work-based matters
-            </Jumbotron>
+
+
             {this.state.blogs.length > 0 ? (
               <List>
                 {console.log(this.state.blogs)}
@@ -149,12 +160,13 @@ class Blogs extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          {/*</Col>
+            {/*</Col>
 
-          <Col size="md-6">*/}
+            <Col size="md-6">*/}
             <Jumbotron>
-              <h1>Add a Post to General</h1>
+              <h1>Add a Post to this Blog</h1>
             </Jumbotron>
+            
             <form>
               <Input
                 value={this.state.title}
@@ -183,10 +195,11 @@ class Blogs extends Component {
             </form>
           </Col>
           <Col size="md-3 sm-0"></Col>
+          {/*<div className="col col-md-3 col-sm-0"></div>*/}
         </Row>
-      </Container>
       </div>
-    );
+      </div>
+    );  
   }
 }
 

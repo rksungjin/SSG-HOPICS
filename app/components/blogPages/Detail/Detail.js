@@ -135,7 +135,7 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h3>Content of this Post</h3>
               <p>
                 {this.state.blog.content}
               </p>
@@ -147,9 +147,10 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/blog">← Back to General Blog Page</Link>
+            <Link to="/blog">← Back to Blog Page</Link>
           </Col>
         </Row>
+        <br/>
         {/* <EditBtn onClick={() => this.editBlog(blog._id)} /> */}
       </Container>
       

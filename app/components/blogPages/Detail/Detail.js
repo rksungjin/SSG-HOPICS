@@ -44,10 +44,18 @@ class Detail extends Component {
   //       .catch(err => console.log(err));
   //   }
   // };
+  // handlePostSubmit = () => {
+  //   var currentPost = $(this)
+  //     .parent()
+  //     .parent()
+  //     .data("post");
+  //   window.location.href = "/blog/" + currentPost.id;
+  // }
 
   handleEditSubmit = event => {
     event.preventDefault();
     if (this.props.match.params.id) {
+      // console.log("hi")
       API.editBlog({
         title: this.state.title,
         postedBy: this.state.postedBy,

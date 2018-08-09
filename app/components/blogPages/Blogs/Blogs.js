@@ -50,11 +50,11 @@ class Blogs extends Component {
 
   // ????????????????
   // ????????????????
-  editBlog = id => {
-    API.editBlog(id)
-      .then(res => this.loadBlogs())
-      .catch(err => console.log(err));
-  };
+  // editBlog = id => {
+  //   API.editBlog(id)
+  //     .then(res => this.loadBlogs())
+  //     .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -114,7 +114,7 @@ class Blogs extends Component {
                           {blog.content}
                       </FontSizeP>
                     </Link>
-                    <EditBtn onClick={() => this.editBlog(blog._id)} />
+                    <EditBtn onClick={() => this.editBlog(blog.content)} />
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     {/* <EditBtn>
                       <Link to={"/blog" + blog._id}>

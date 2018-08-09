@@ -14,8 +14,8 @@ export default {
     return axios.delete("/apis/blogs/" + id);
   },
   // Updates the blog with the given id ??????????????????????????????????
-  editBlog: function(id) {
-    return axios.put("/apis/blogs/" + id);
+  editBlog: function(id, data) {
+    return axios.put("/apis/blogs/" + id, data);
   },
 
   // Saves a blog to the database

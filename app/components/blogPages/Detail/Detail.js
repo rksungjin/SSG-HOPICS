@@ -31,11 +31,40 @@ class Detail extends Component {
       [name]: value
     });
   };
+  loadBlogs () {
+    API.getBlogs()
+      .then(res => {
+        this.setState({ blogs: res.data, title: "", postedBy: "", content: "" })
+      })
+      .catch(err => console.log(err));
+  };
 
-  handleFormSubmit = event => {
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.title && this.state.postedBy) {
+  //     API.saveBlog({
+  //       title: this.state.title,
+  //       postedBy: this.state.postedBy,
+  //       content: this.state.content
+  //     })
+  //       .then(res => this.loadBlogs())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
+  // handlePostSubmit = () => {
+  //   var currentPost = $(this)
+  //     .parent()
+  //     .parent()
+  //     .data("post");
+  //   window.location.href = "/blog/" + currentPost.id;
+  // }
+
+  //insert specific routing - blog/:id/title:, content:
+  handleEditBlog = event => {
     event.preventDefault();
-    if (this.state.title && this.state.postedBy) {
-      API.saveBlog({
+    if (this.props.match.params.id) {
+      console.log(this.state)
+      API.editBlog(this.props.match.params.id, {
         title: this.state.title,
         postedBy: this.state.postedBy,
         content: this.state.content
@@ -43,12 +72,16 @@ class Detail extends Component {
         .then(res => this.loadBlogs())
         .catch(err => console.log(err));
     }
-    deleteBlog = id => {
-      API.deleteBlog(id)
-        .then(res => this.loadBlogs())
-        .catch(err => console.log(err));
-    };
   };
+  //remove post then repost*
+
+  
+
+  // handleEditBlog = id => {
+  //   API.editBlog(id)
+  //     .then(res => this.loadBlogs())
+  //     .catch(err => console.log(err));
+  // };
 
   render() {
     return (
@@ -86,12 +119,12 @@ class Detail extends Component {
 
               />
               <FormBtn
-                disabled={!(this.state.postedBy && this.state.title)}
-                onClick={() => this.deleteBlog(blog._id)}
-                onClick={this.handleFormSubmit}
+                // disabled={!(this.state.postedBy && this.state.title)}
+                // onClick={() => this.deleteBlog(blog._id)}
+                onClick={this.handleEditBlog}
                 
               >
-                Submit a Post
+                Update Post
               </FormBtn>
             </form>
 

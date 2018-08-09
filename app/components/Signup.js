@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
 import Nav from './children/Nav'
 
-//require('./signup.css');
+require('./Signup.css');
 
 export default class Signup extends Component { 
 
@@ -223,13 +223,15 @@ export default class Signup extends Component {
           deAuthenticate={this.props.deAuthenticate}
           logout={this.props.logout}
         />  
-				<div id="registration-container" className="container-fluid bg-secondary mt-5">
+				<div id="registration-container" className="container-fluid bg-secondary p-5 Signup">
 				    <section className="container">
 						<div className="container-page">		
-						<form onSubmit={this.handleSubmit.bind(this)}>		
+						<form onSubmit={this.handleSubmit.bind(this)}>
+						<div className="row">
+							<div className="col-md-3"></div>
 							<div className="col-md-6">
-								<h3 className="">Registration</h3>
-								
+								<h3 className="text-center">Registration</h3>
+								<div className="row">
 								<div id="username-form" ref="usernameForm" className="form-group col-lg-12">
 									<label>Username</label>
 									<input type="" name="" ref="username" className="form-control" id="username-input" value={this.state.username} onChange={this.handleUsernameValidation}/>
@@ -260,13 +262,16 @@ export default class Signup extends Component {
 									<label>Repeat Email Address</label>
 									<input type="email" name="" ref="emailRepeat" className="form-control" id="repeat-email-input" value={this.state.emailRepeat} onChange={this.handleEmailRepeat} />
 									<small id="email-repeat-feedback" className="" ref="emailRepeatFeedback"></small>
-								</div>			
-								
+								</div>
+										
+								</div>
+								<button type="submit" className="btn btn-primary signup-btn">Register</button>
 							</div>
-						
+							
+							<div className="col-md-3"></div>
 								
-								<button type="submit" className="btn btn-primary signup">Register</button>
-					
+
+						</div>
 						</form>
 						</div>
 					</section>

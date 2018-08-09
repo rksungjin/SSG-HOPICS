@@ -1,4 +1,12 @@
-body {
+.Signup {
+    /*text-align: center;*/
+    margin-top: 100px;
+  }
+.signup-btn {
+	float: right;
+}
+
+/*body {
 	color: yellow;
 }
 
@@ -15,3 +23,4 @@ registration-container {
 .container-page {
 	background: grey;
 }
+*/

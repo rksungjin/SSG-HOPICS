@@ -48,19 +48,19 @@ class Blogs extends Component {
       .catch(err => console.log(err));
   };
 
-  editBlog = (_id) => {
-    // event.preventDefault();
-    if (this.props.match.params.id) {
-      // console.log("hi")
-      API.editBlog({
-        title: this.state.title,
-        postedBy: this.state.postedBy,
-        content: this.state.content
-      })
-        .then(res => this.loadBlogs())
-        .catch(err => console.log(err));
-    }
-  };
+  // editBlog = (_id) => {
+  //   // event.preventDefault();
+  //   if (this.props.match.params.id) {
+  //     // console.log("hi")
+  //     API.editBlog({
+  //       title: this.state.title,
+  //       postedBy: this.state.postedBy,
+  //       content: this.state.content
+  //     })
+  //       .then(res => this.loadBlogs())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   // ????????????????
   // ????????????????
@@ -128,7 +128,7 @@ class Blogs extends Component {
                           {blog.content}
                       </FontSizeP>
                     <Link to={"/blog/" + blog._id}>
-                    <EditBtn onClick={() => this.editBlog(blog._id)} />    
+                    <EditBtn/>    
                     </Link>
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     {/* <EditBtn>

@@ -48,6 +48,20 @@ class Blogs extends Component {
       .catch(err => console.log(err));
   };
 
+  editBlog = (_id) => {
+    // event.preventDefault();
+    if (this.props.match.params.id) {
+      // console.log("hi")
+      API.editBlog({
+        title: this.state.title,
+        postedBy: this.state.postedBy,
+        content: this.state.content
+      })
+        .then(res => this.loadBlogs())
+        .catch(err => console.log(err));
+    }
+  };
+
   // ????????????????
   // ????????????????
   // editBlog = id => {
@@ -101,7 +115,7 @@ class Blogs extends Component {
                 {console.log(this.state.blogs)}
                 {this.state.blogs.map(blog => (
                   <ListItem key={blog._id}>
-                    <Link to={"/blog/" + blog._id}>
+                    
                       <strong>
                         <FontSizeP>
                         {blog.title}
@@ -113,8 +127,10 @@ class Blogs extends Component {
                        <FontSizeP>
                           {blog.content}
                       </FontSizeP>
+                    //onc
+                    <Link to={"/blog/" + blog._id}>
+                    <EditBtn onClick={() => this.editBlog(blog._id)} />    
                     </Link>
-                    <EditBtn onClick={() => this.editBlog(blog.content)} />
                     <DeleteBtn onClick={() => this.deleteBlog(blog._id)} />
                     {/* <EditBtn>
                       <Link to={"/blog" + blog._id}>

@@ -52,7 +52,8 @@ class Detail extends Component {
   //   window.location.href = "/blog/" + currentPost.id;
   // }
 
-  handleEditSubmit = event => {
+  //insert specific routing - blog/:id/title:, content:
+  editBlog = event => {
     event.preventDefault();
     if (this.props.match.params.id) {
       // console.log("hi")
@@ -65,6 +66,12 @@ class Detail extends Component {
         .catch(err => console.log(err));
     }
   };
+
+  // editBlog = id => {
+  //   API.editBlog(id)
+  //     .then(res => this.loadBlogs())
+  //     .catch(err => console.log(err));
+  // };
 
   render() {
     return (
@@ -104,10 +111,10 @@ class Detail extends Component {
               <FormBtn
                 disabled={!(this.state.postedBy && this.state.title)}
                 // onClick={() => this.deleteBlog(blog._id)}
-                onClick={this.handleEditSubmit}
+                onClick={this.editBlog}
                 
               >
-                Submit a Post
+                Update Post
               </FormBtn>
             </form>
 

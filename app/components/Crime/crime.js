@@ -104,6 +104,18 @@ return (
 <div className="Crime">
 <div className = "Header"></div>
 
+  <header className="CrimeReport mt-5" id="crime-header">
+    <div className="container-fluid text-center border-bottom border-dark mb-5">
+      <div className="row pb-1 bg-dark mb-4 text-dark">this invisible black text
+      </div>
+          <div className="row p-4 bg-dark text-white">
+            <div className="col-lg-12">
+              <h1 className="text-center">CRIME REPORT</h1> 
+            </div>
+          </div>
+    </div>
+  </header>
+
 
  <h2>Highlighted Incidents</h2>
 

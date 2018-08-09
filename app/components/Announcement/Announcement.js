@@ -8,15 +8,12 @@ export default class Announcement extends Component {
   render() {
     return (
       <div>
-        <Nav
-          authenticated={this.props.authenticated}
-          authenticate={this.props.authenticate}
-          deAuthenticate={this.props.deAuthenticate}
-          logout={this.props.logout}
-        />   
- 
-       
-
+            <Nav
+            authenticated={this.props.authenticated}
+            authenticate={this.props.authenticate}
+            deAuthenticate={this.props.deAuthenticate}
+            logout={this.props.logout}
+            />   
 
             <header className="Announcement" id="announcement-header">
                     <div className="container-fluid text-center border-bottom border-dark">
@@ -89,7 +86,6 @@ export default class Announcement extends Component {
                                 <p>Every 3rd Wednesday, 9-10:30am</p>
                                 <p>At St. Joseph Center</p>
                                 <p>Join us as we check-in, collaborate, and create next steps for our SPA's most vulnerable on the streets</p>
-                            <br />
                             </li>
                         </ul> 
                     </div>
@@ -99,26 +95,72 @@ export default class Announcement extends Component {
             <section id="announcement-4" className="container pt-4">
                 <div className="row">
                     <div className="col-lg-12 col-lg">
-                        <h3 className="text-primary">Upcoming Meetings</h3>
+                        <h3 className="text-primary">CES Entry Points and Outreach Resources</h3>
+                        <p>Encounter a homeless family? Please have the family call: 211</p>
+                        <br />
                         <ul>
-                            <li>
-                                <h5 className="text-primary">CES Entry Points and Outreach Resources:</h5>
-                                <p>Encounter a homeless family? Please have the family call: 211</p>
-                            <br />
-                            </li>
-                            <li>
-                                <h5 className="text-primary">SPA 5 Outreach and Most Vulnerable Case Conferencing:</h5>
-                                <p>Every 3rd Wednesday, 9-10:30am</p>
-                                <p>At St. Joseph Center</p>
-                                <p>Join us as we check-in, collaborate, and create next steps for our SPA's most vulnerable on the streets</p>
-                            <br />
-                            </li>
+                            <li><h4>Drop in centers for single adults:</h4>
+                                <ul>
+                                    <li>
+                                        <h5 className="text-primary">St. Joseph Center</h5>
+                                        <p>404 Lincoln Blvd, Venice, CA.  (310) 396-6878</p>
+                                        <p>Hours of Operation: Mon, Tues, Thurs: 7:30am-4:30pm, Wed: 7:30am-Noon, Fri: 7:30am-3:30pm</p>
+                                        <br />
+                                    </li>
+                                    <li>
+                                    <h5 className="text-primary">The People Concern</h5>
+                                        <p>503 Olympic Blvd, Santa Monica, CA.  (310) 450-4050</p>
+                                        <p>Hours of Operation: Mon-Fri: 9:00am-5:00pm, Sat, Sun: 8:00am-Noon</p>
+                                        <br />
+                                    </li>
+                                </ul>
+                            </li>      
+                        </ul> 
+                        <ul>
+                            <li><h4>Drop in for Youth ages 12-25:</h4>
+                                <ul>
+                                    <li>
+                                        <h5 className="text-primary">Safe Place For Youth</h5>
+                                        <p>2469 Lincoln Blvd, Venice, CA.  (310) 902-2283</p>
+                                        <p>Hours of Operation: Drop in Tues, Weds, Thurs: 1:00pm-5:00pm, Appointments Mon-Fri: 10:00am-6:00pm</p>
+                                        <br />
+                                    </li>
+                                </ul>
+                            </li>      
+                        </ul> 
+                        <ul>
+                            <li><h4>Mental Health Services:</h4>
+                                <ul>
+                                    <li>
+                                        <h5 className="text-primary">Mental Health Urgent Care Center, Exodus Recovery</h5>
+                                        <p>11444 W. Washington Blvd. Suite D, Los Angeles, CA 90066-6024</p>
+                                        <p>Hours of Operation: 24 Hour Psychiatric Crisis Center - open 24 hours a day, 7 days a week, 365 days per year</p>
+                                        <br />
+                                    </li>
+                                    <li>
+                                    <h5 className="text-primary">DMH SB-82 Mobile Triage Team</h5>
+                                        <p>call (310) 482-6600 to make a referral</p>
+                                        <br />
+                                    </li>
+                                    <li>
+                                    <h5 className="text-primary">Psychiatric Mobile Response Team</h5>
+                                        <p>call (310) 482-3260</p>
+                                        <p>Teams hae legal authority per Welfare and Institutions Code 5150 and 5585</p>
+                                        <br />
+                                    </li>
+                                    <li>
+                                    <h5 className="text-primary">Whole Person Care</h5>
+                                        <p>for referrals call (844) 804-5200</p>
+                                        <p>Whole Person Care focuses on the following: 1) People experiencing homelessness, 2) People recently released from incarceration 3) People with mental health issues 4) People experiencing substance use disorder 5) People with multiple medical conditions 60 Women experiencing barriers to a healthy pregnancy</p>
+                                        <br />
+                                    </li>
+
+                                </ul>
+                            </li>      
                         </ul> 
                     </div>
                 </div>     
             </section>
-
-
         
       </div>
     );

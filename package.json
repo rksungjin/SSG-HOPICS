@@ -1,8 +1,8 @@
 {
-  "name": "travelsecure-react",
+  "name": "ssg-hopics-react",
   "version": "1.0",
-  "homepage": "https://sleepy-springs-57038.herokuapp.com/",
-  "author": "Omar Patel",
+  "homepage": "",
+  "author": "",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --watch & nodemon ./server/bin/www",
@@ -34,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/OSP123/TravelSecure-Mongo.git"
+    "url": "https://github.com/rksungjin/SSG-HOPICS.git"
   },
   "dependencies": {
     "axios": "^0.12.0",

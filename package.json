@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "webpack --watch & nodemon ./server/bin/www",
     "start": "nodemon ./server/bin/www",
+    "heroku-postbuild": "webpack -p",
     "build": "webpack",
     "seed": "node scripts/seedDB.js"
   },

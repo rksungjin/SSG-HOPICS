@@ -13,7 +13,7 @@ exports.loginUser = (req, res, next) => {
   // So we're sending the user back the route to the members page because the redirect will happen on the front end
   // They won't get this or even be able to access this page if they aren't authed
 
-  return passport.authenticate('local', (err, token, userData) => {
+  return passport.authenticate('local', (err, userData) => {
     if (err) {
       if (err.name === 'IncorrectCredentialsError') {
         return res.status(400).json({
@@ -28,13 +28,16 @@ exports.loginUser = (req, res, next) => {
       });
     }
 
-    console.log(token, "this is the token in users_api.js");
-    console.log(userData, "this is the userData in users_api.js");
+    if (userData.userMissing || userData.passwordIncorrect) {
+      return res.json({
+        success: false,
+        message: "Incorrect username or password"
+      })
+    }
 
     return res.json({
       success: true,
       message: 'You have successfully logged in!',
-      token,
       user: userData
     });
   })(req, res, next);

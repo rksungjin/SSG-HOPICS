@@ -38,10 +38,15 @@ export default class Login extends Component {
 
   	axios.post('/apis/users/login', submitObject)
 		.then(function(data) {
-      this.props.authenticate();
-      this.setState({
-        redirectToReferrer: true
-      });
+      if (data.data.success) {
+        this.props.authenticate();
+        !this.state.authenticated ? this.redirect() : 
+        this.setState({
+          redirectToReferrer: true
+        });
+      } else {
+        alert(data.data.message);
+      }
       console.log(data);
     }.bind(this)).catch(function(err) {
       console.log(err);
@@ -76,7 +81,7 @@ export default class Login extends Component {
 
     if (redirectToReferrer) {
       return (
-        <Redirect to={from}/>
+        <Redirect to={from} />
       )
     }
     

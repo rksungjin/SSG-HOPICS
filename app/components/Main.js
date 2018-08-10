@@ -24,21 +24,25 @@ export default class Main extends Component {
           logout={this.props.logout}
         />   
 
-       
+                
 
 
         <header className="intro">
             <div className="intro-body">
-                <div className="container">
+               
                     <div className="row">
-                        <div className="col-md-8 col-md-offset-2">
-
-                            
+                        <div className="col-lg-12">
+                            <div className="wrapper">
+                                 <img src={require("../img/homeless3.jpg")} className="img-responsive" className="img-fluid" />
+                                                     
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+            
+
 
         <section id="about" className="container content-section text-center">
             <div className="row">

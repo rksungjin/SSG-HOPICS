@@ -1,17 +1,21 @@
 .intro {
     width: 100% !important;
     height: auto;
-    padding: 33% 0;
     text-align: center;
-    background: url(../img/homeless3.jpg) no-repeat center scroll;
+    /*background: url(../img/homeless3.jpg) no-repeat center scroll;*/
     color: white;
     background-color: black;
     margin-top: 6em;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
   }
 
 .about {
     text-align: center; 
     font: red;
+    font-family: "Chalkboard", Times, serif;
 
 }
 .body2 {
@@ -27,4 +31,7 @@
     color: white;
     background-color: black;
 }
+.wrapper {
+    width: 100%;
+ }
 

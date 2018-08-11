@@ -30,7 +30,7 @@ const authCheck = require('./config/middleware/attachAuthenticationStatus');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(__dirname));
+app.use(express.static('public')); //dirname
 
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());

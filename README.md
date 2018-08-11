@@ -1,4 +1,13 @@
 ## Setup for Local Machine
+
+<a href="https://imgflip.com/gif/2fpga7">
+
+
+
+
+
+
+
 - `yarn install`
 - `yarn seed`
 - Run application using `yarn dev` locally

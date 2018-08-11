@@ -2,12 +2,11 @@
   "name": "ssg-hopics-react",
   "version": "1.0",
   "homepage": "https://blooming-depths-69172.herokuapp.com/",
-  "author": "",
+  "author": "Gyfindr",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --watch & nodemon ./server/bin/www",
-    "start": "node ./server/bin/www",
-    "postinstall": "webpack -p",
+    "start": "nodemon ./server/bin/www",
     "build": "webpack",
     "seed": "node scripts/seedDB.js"
   },

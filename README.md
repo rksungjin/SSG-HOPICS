@@ -1,4 +1,7 @@
-## Setup for Local Machine
+# HOPICS  
+Homeless Outreach Program Integrated Care System
+
+
 
 
 
@@ -9,9 +12,6 @@
 
 
 
-- `yarn install`
-- `yarn seed`
-- Run application using `yarn dev` locally
 
 ## Purpose of Application
 - Help others understand the basic structure of an Express/Mongo/Mongoose/Handlebars application using MVC (mostly based on Rails pattern).

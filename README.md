@@ -14,6 +14,13 @@ Homeless Outreach Program Integrated Care System
 
 
 ## Purpose of Application
-- Help others understand the basic structure of an Express/Mongo/Mongoose/Handlebars application using MVC (mostly based on Rails pattern).
-- Application itself is a trips-based application, with local authentication implemented using Passport.js. 
-- Schema is built using Mongoose.
+To provide assistance with communication amongst agencies that operate  within HOPICS.
+Address the needs of displaced people within the Greater LA area and further improve areas with moderate to high amounts of activity. 
+
+## Technologies Used
+
+React JS <br>
+Express/Node Web Server <br>
+MongoDB / Mongoose <br>
+Heroku Deployment <br>
+User authentication <br>

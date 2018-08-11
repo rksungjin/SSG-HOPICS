@@ -1,5 +1,7 @@
 # HOPICS  
-Homeless Outreach Program Integrated Care System
+## (Homeless Outreach Program Integrated Care System)
+
+Jane Asawa, Richard Kim, Sam Torosyan, Shri Narayanan
 
 
 

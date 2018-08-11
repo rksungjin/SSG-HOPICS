@@ -31,3 +31,9 @@ Express/Node Web Server <br>
 MongoDB / Mongoose <br>
 Heroku Deployment <br>
 User authentication <br>
+
+## Website Functionality
+
+Announcements – Displays message board of latest memos, meeting times & resources <br><br>
+Blog – Forum for workplace based matters and informational posts <br><br>
+Crime Report – Displays incidents that involve a homeless victim as an informational resource for outreach workers. <br><br>

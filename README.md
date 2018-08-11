@@ -1,6 +1,6 @@
 ## Setup for Local Machine
 
-<a href="https://imgflip.com/gif/2fpga7">
+<a href="https://imgflip.com/gif/2fpga7"></a>
 
 
 

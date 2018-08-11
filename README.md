@@ -19,6 +19,11 @@ Jane Asawa, Richard Kim, Sam Torosyan, Shri Narayanan
 To provide assistance with communication amongst agencies that operate  within HOPICS.
 Address the needs of displaced people within the Greater LA area and further improve areas with moderate to high amounts of activity. 
 
+<br>
+
+Intended to enhance communication amongst agencies working within in SPA6
+
+
 ## Technologies Used
 
 React JS <br>

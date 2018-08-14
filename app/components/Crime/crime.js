@@ -126,7 +126,9 @@ return (
           <select name="district" id="woop" value={this.state.area}
             onChange={(e) => this.handleArea(e)} className="styleOne"
           >
-            <option value="Wilshire" className="styleOne" key="Wilshire">Wilshire</option>
+            <option value="ChooseOne" className="styleOne" key="choose">Choose an Area</option>
+            {/*<option value="Wilshire" className="styleOne" key="Wilshire">Wilshire</option>*/}
+            <option value="Wilshire" key="Wilshire">Wilshire</option>
             <option value="Hollywood" key="Hollywood">Hollywood</option>
             <option value="Van Nuys" key="Van Nuys">Van Nuys</option>
             <option value="Olympic" key="Olympic">Olympic</option>

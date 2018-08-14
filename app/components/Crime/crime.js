@@ -110,7 +110,8 @@ return (
       </div>
           <div className="row p-4 bg-dark text-white">
             <div className="col-lg-12">
-              <h1 className="text-center">CRIME REPORT</h1> 
+              <h1 className="text-center">CRIME REPORT</h1>
+              <p>Crimes with a <strong>victim</strong> who is homeless</p> 
             </div>
           </div>
     </div>
@@ -119,8 +120,9 @@ return (
 
  <h2>Highlighted Incidents</h2>
 
+
 <h2>
-   <div>
+   <div className="">
           
           
           <select name="district" id="woop" value={this.state.area}
@@ -145,7 +147,7 @@ return (
 
 
 
-<div className="find-places">
+<div className="container find-places">
 {this.state.newArea && this.state.newArea.map((item) => {
 console.log("item", item)
 return (

@@ -96,7 +96,7 @@ class Detail extends Component {
             <form>
               <article>
                 <p>
-                {this.state.blog.title}
+                Current Title: {this.state.blog.title}
                 </p>
               </article>
               <Input
@@ -105,12 +105,22 @@ class Detail extends Component {
                 name="title"
                 placeholder="Title (required)"
               />
+              <article>
+                <p>
+                Currently Posted By: {this.state.blog.postedBy}
+                </p>
+              </article>
               <Input
                 value={this.state.postedBy}
                 onChange={this.handleInputChange}
                 name="postedBy"
                 placeholder="Posted by (required)"
               />
+              <article>
+                <p>
+                Current Content: {this.state.blog.content}
+                </p>
+              </article>
               <TextArea
                 value={this.state.content}
                 onChange={this.handleInputChange}
@@ -135,10 +145,6 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h3>Content of this Post</h3>
-              <p>
-                {this.state.blog.content}
-              </p>
               <p>
                 {this.state.blog.id}
               </p>

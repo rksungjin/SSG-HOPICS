@@ -1,7 +1,6 @@
 .Crime {
     text-align: center;
-    /*margin-top: 100px;*/
-  }
+}
   
   
   
@@ -44,8 +43,6 @@
   
   }
 
-  .custom-select{
-  }
 
   .data {
     text-align: center;
@@ -74,7 +71,7 @@
   }
 
   .find-places{
-    width: 600px;
+    /*width: 600px;*/
     text-align: center;
     float: initial;
     margin: auto;

@@ -110,7 +110,8 @@ return (
       </div>
           <div className="row p-4 bg-dark text-white">
             <div className="col-lg-12">
-              <h1 className="text-center">CRIME REPORT</h1> 
+              <h1 className="text-center">CRIME REPORT</h1>
+              <p>Crimes with a <strong>victim</strong> who is homeless</p> 
             </div>
           </div>
     </div>
@@ -119,14 +120,17 @@ return (
 
  <h2>Highlighted Incidents</h2>
 
+
 <h2>
-   <div>
+   <div className="">
           
           
           <select name="district" id="woop" value={this.state.area}
             onChange={(e) => this.handleArea(e)} className="styleOne"
           >
-            <option value="Wilshire" className="styleOne" key="Wilshire">Wilshire</option>
+            <option value="ChooseOne" className="styleOne" key="choose">Choose an Area</option>
+            {/*<option value="Wilshire" className="styleOne" key="Wilshire">Wilshire</option>*/}
+            <option value="Wilshire" key="Wilshire">Wilshire</option>
             <option value="Hollywood" key="Hollywood">Hollywood</option>
             <option value="Van Nuys" key="Van Nuys">Van Nuys</option>
             <option value="Olympic" key="Olympic">Olympic</option>
@@ -143,7 +147,7 @@ return (
 
 
 
-<div className="find-places">
+<div className="container find-places">
 {this.state.newArea && this.state.newArea.map((item) => {
 console.log("item", item)
 return (

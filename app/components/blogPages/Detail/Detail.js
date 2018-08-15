@@ -18,13 +18,21 @@ class Detail extends Component {
     postedBy: "",
     content: ""
   };
-  // When this component mounts, grab the blog with the _id of this.props.match.params.id
+  // When this component mounts, it will get the blog with the _id of this.props.match.params.id
   // e.g. localhost:3000/blogs/599dcb67f0f16317844583fc
+  // the title, postedBy and content info can be called in the render-->form-->value where it can be edited
   componentDidMount() {
     API.getBlog(this.props.match.params.id)
-      .then(res => this.setState({ blog: res.data }))
+      .then(res => this.setState({
+         blog: res.data,
+         title: res.data.title,
+         postedBy: res.data.postedBy,
+         content: res.data.content
+      }))
       .catch(err => console.log(err));
   }
+
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -94,33 +102,21 @@ class Detail extends Component {
               <h4>Edit your post</h4>
             </Jumbotron>
             <form>
-              <article>
-                <p>
-                Current Title: {this.state.blog.title}
-                </p>
-              </article>
+              
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
                 placeholder="Title (required)"
               />
-              <article>
-                <p>
-                Currently Posted By: {this.state.blog.postedBy}
-                </p>
-              </article>
+              
               <Input
                 value={this.state.postedBy}
                 onChange={this.handleInputChange}
                 name="postedBy"
                 placeholder="Posted by (required)"
               />
-              <article>
-                <p>
-                Current Content: {this.state.blog.content}
-                </p>
-              </article>
+              
               <TextArea
                 value={this.state.content}
                 onChange={this.handleInputChange}
